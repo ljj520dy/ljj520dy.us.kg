@@ -1,0 +1,83 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* 导航栏样式 */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+
+/* 链接样式 */
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+/* 页面容器样式 */
+.page-container {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 美食标题样式 */
+.food-title {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 美食介绍样式 */
+.food-intro {
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* 美食布局容器样式，调整为纵向排列 */
+.food-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 单个美食容器样式，用于整体布局 */
+.single-food-item {
+    display: flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* 美食图片样式 */
+.food-image {
+    width: 40%;
+    height: auto;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* 美食描述容器样式，用于放置美食介绍等文字内容 */
+.food-description {
+    width: 60%;
+    padding: 15px;
+}

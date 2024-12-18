@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>现实中的狗熊岭 - 哈尔滨雪乡 - 亚布力</title>
+    <!-- 引入swiper的CSS文件（若后续不再需要轮播图相关样式，可考虑移除） -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        /* 全局样式设置，可根据实际情况调整视频播放器的样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        /* 主标题样式 */
+        h1 {
+            margin-top: 50px;
+            color: #333;
+        }
+
+        /* 视频播放器容器样式，设置为合适大小并居中显示 */
+        #video-container {
+            width: 50%;  /* 调整宽度，使其更合适展示视频，可按需修改 */
+            margin: 20px auto;
+        }
+
+        video {
+            width: 100%;  /* 将视频宽度修改为总宽度的一半 */
+            max-width: 100%;
+            height: auto;
+            max-height: 900px;  /* 设置一个合适的最大高度，避免视频过大，可按需修改 */
+            margin: 0 auto;  /* 使视频在容器内水平居中显示 */
+        }
+
+      
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li onclick="goToIndex()"><a href="../index.html" class="link">返回首页</a></li>
+            <li><a href="index.html" class="link">主页</a></li>
+            <li><a href="美食.html" class="link">熊出没美食</a></li>
+            <li><a href="现实中的狗熊岭.html" class="link">现实中的狗熊岭</a></li>
+        </ul>
+    </nav>
+    <!-- 主标题 -->
+    <h1>现实中的狗熊岭 - 哈尔滨雪乡 - 亚布力</h1>
+
+    <!-- 视频播放器容器 -->
+    <div id="video-container">
+        <video id="main-video" controls autoplay>
+            <source src="3/1.mp4" type="video/mp4">
+            您的浏览器不支持 HTML5 视频播放。
+        </video>
+    </div>
+    
+
+</body>
+
+</html>

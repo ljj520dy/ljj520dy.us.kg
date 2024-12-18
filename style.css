@@ -1,0 +1,114 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* 导航栏样式 */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+     /* 链接样式 */
+      .link {
+            color: white;
+            text-decoration: none;
+        }
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+
+/* 页面容器样式 */
+.page-container {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 首页样式 */
+.home-page {
+    text-align: center;
+}
+
+.home-page h1 {
+    color: #333;
+}
+
+/* 轮播图容器样式 */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 10px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 轮播图图片样式 */
+.carousel img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.carousel img:first-child {
+    display: block;
+}
+
+/* 轮播图切换按钮样式 */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* 弹出框样式（用于显示介绍内容） */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+/* 弹出框关闭按钮样式 */
+.popup-close {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+}
