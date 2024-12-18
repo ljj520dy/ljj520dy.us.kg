@@ -1,0 +1,271 @@
+/* 全局样式设置 */
+body {
+  margin: 0;
+  padding: 0;
+  /* 视频背景 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow-y: scroll;
+  /* 允许页面纵向滚动 */
+  -webkit-overflow-scrolling: touch;
+  /* 实现流畅滚动效果 */
+}
+
+/* 隐藏滚动条，但仍可滚动 */
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+/* 视频背景样式，使其铺满整个页面 */
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+/* 标题样式 */
+h1 {
+  font-family: 'Pacifico', cursive;
+  /* 使用Pacifico字体实现飘逸效果 */
+  font-size: 120px;
+  /* 字体 */
+  background: linear-gradient(to right, #FF0000, #FFA500, #FFFF00, #008000, #0000FF, #4B0082, #800080);
+  /* 彩虹渐变颜色*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 30px 0;
+}
+
+/* 照片容器样式 */
+.photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  max-width: 1200px;
+  margin-top: 50px;
+  /* 与标题距离 */
+}
+
+/* 单个照片样式 */
+.photo {
+  width: 300px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* 半透明白色背景 */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* 阴影*/
+  margin: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* 增加阴影过渡效果 */
+  position: relative;
+  /* 实现照片上的元素定位 */
+}
+
+/* 照片悬停效果 */
+.photo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  /* 悬停时阴影 */
+}
+
+/* 照片图片样式 */
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 在照片上添加一层半透明黑色遮罩，鼠标悬停时透明度降低 */
+.photo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  opacity: 0;
+  /* 初始透明度为0 */
+  transition: opacity 0.3s ease;
+}
+
+/* 鼠标悬停在照片上时，显示遮罩 */
+.photo:hover::before {
+  opacity: 0.3;
+  /* 悬停时显示一定透明度的遮罩 */
+}
+
+/* 在照片中心添加一个白色圆形图标，鼠标悬停时放大并变色 */
+.photo.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: black;
+  opacity: 0;
+  /* 初始隐藏 */
+  transition: all 0.3s ease;
+}
+
+/* 鼠标悬停在照片上时，显示并放大图标，改变颜色 */
+.photo:hover.icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+  background-color: #00FF00;
+  color: white;
+}
+
+/* 当鼠标悬停在照片上时，显示照片相关信息的弹出框 */
+.photo:hover.info-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 照片相关信息弹出框样式 */
+.photo.info-box {
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* 备注区域样式 */
+.footer {
+  font-family: 'Pacifico', cursive;
+  background-image: url('');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+  /* 与照片区域距离 */
+}
+
+/* "熊出没"文字样式，设置浅棕色字体颜色、白色字体轮廓等特效 */
+h2 {
+  font-family: 'Pacifico', cursive;
+  /* 使用Pacifico字体实现飘逸效果 */
+  font-size: 150px;
+  /* 字体大小 */
+  color: #CD853F;
+  /* 浅棕色字体颜色 */
+  -webkit-text-stroke: 2px white;
+  /* 白色字体轮廓，粗细为2px */
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+  /* 添加阴影效果 */
+  -webkit-font-smoothing: antialiased;
+  /* 抗锯齿，使字体边缘更平滑 */
+  margin: 0;
+  padding: 30px 0;
+  text-align: center;
+}
+/* 熊出没简介容器样式 */
+.description-container {
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #fff;
+  /* 文字颜色为黑色 */
+}
+
+/* 熊出没大电影容器样式 */
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 50px;
+}
+
+/* 单个熊出没大电影样式 */
+.movie {
+  width: 350px;
+  margin: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+/* 大电影图片样式 */
+.movie img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-width: 100%; /* 添加这行，确保图片在父元素内不会超出宽度，以适应响应式布局 */
+}
+
+/* 大电影悬停效果 */
+.movie:hover {
+  transform: translateY(-5px);
+}
+
+/* 大电影信息容器样式 */
+.movie-info {
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* 大电影悬停时显示信息 */
+.movie:hover.movie-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}
+
+/* 响应式样式，当屏幕宽度变小，例如在移动端设备上时，调整布局 */
+@media (max-width: 768px) {
+ .movie {
+    width: 100%; /* 让每个大电影元素占满一行 */
+    margin: 20px 0; /* 上下 margin 保持一定间隔 */
+  }
+}
